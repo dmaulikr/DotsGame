@@ -25,6 +25,7 @@
 @property (strong) NSMutableArray *dotRows;
 @property (strong) UIGravityBehavior *gravityBehavior;
 @property (strong) UICollisionBehavior *collissionBehavior;
+@property (strong) UIDynamicItemBehavior *bounceBehavior;
 @property (strong) UIDynamicAnimator *animator;
 @property (assign) NSInteger score;
 

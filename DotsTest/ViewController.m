@@ -18,15 +18,6 @@
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-//    For visual debugging
-    
-//    [self.view.layer setBorderColor:[UIColor blueColor].CGColor];
-//    
-//    [self.view setClipsToBounds:YES];
-//    
-    
     
     [self.view setFrame:CGRectMake(0, 0, 200, 200)];
 
@@ -38,8 +29,7 @@
     self.dotRows = [self createDotMatrixStartingFromPoint:[self.view frame].origin];
     [self.animator addBehavior:self.collissionBehavior];
     [self.animator addBehavior:self.gravityBehavior];
-    
-   // [self pinAllViews];
+    [self.animator addBehavior:self.bounceBehavior];
     
     [self.animator setDelegate:self];
 }
@@ -59,6 +49,9 @@
 {
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     self.collissionBehavior = [[UICollisionBehavior alloc] init];
+    self.bounceBehavior = [[UIDynamicItemBehavior alloc] init];
+    
+    self.bounceBehavior.elasticity = 0.6 ;
     
     [self.collissionBehavior addBoundaryWithIdentifier:@"Left" fromPoint:CGPointMake([self.view frame].origin.x,[self.view frame].origin.y - 200)
                                                toPoint:CGPointMake([self.view frame].origin.x, CGRectGetMaxY([self.view frame]))];
@@ -96,23 +89,6 @@
     return dotRows;
 }
 
-- (void)pinAllViews
-{
-    for (NSInteger i = 0; i < 4; i++) {
-        
-        NSArray *dotRow = self.dotRows[i];
-        
-        for (NSInteger j = 0; j < 4; j ++) {
-            DotView *view = dotRow[j];
-            
-            UIAttachmentBehavior *behavior = [[UIAttachmentBehavior alloc] initWithItem:view attachedToAnchor:view.center];
-            view.attachmentBehavior = behavior;
-            [self.animator addBehavior:behavior];
-            
-        }
-    }
-}
-
 
 - (NSMutableArray*)createRowStartingFrom:(CGPoint)currentPoint count:(NSInteger)count row:(NSInteger)row
 {
@@ -122,18 +98,28 @@
     for (NSInteger i = 0; i < count ; i ++) {
         
         DotView *dot = [[DotView alloc] initWithColor:[UIColor randomColor]];
-        
         [dots addObject:dot];
-        [self.view addSubview:dot];
-        [dot setFrame:CGRectMake(currentPoint.x, currentPoint.y, 48, 48)];
-        currentPoint = CGPointApplyAffineTransform(currentPoint, CGAffineTransformMakeTranslation(50, 0));
-        [self.collissionBehavior addItem:dot];
-        [self.gravityBehavior addItem:dot];
         [dot setRow:row];
         [dot setColumn:i];
+    
+        [self configureDotViewAnimators:dot];
+        
+        [dot setFrame:CGRectMake(currentPoint.x, currentPoint.y, 48, 48)];
+        currentPoint = CGPointApplyAffineTransform(currentPoint, CGAffineTransformMakeTranslation(50, 0));
+
     }
     
     return dots;
+}
+
+- (void)configureDotViewAnimators:(DotView*)dot
+{
+  
+    [self.view addSubview:dot];
+    [self.collissionBehavior addItem:dot];
+    [self.gravityBehavior addItem:dot];
+    [self.bounceBehavior addItem:dot];
+    
 }
 
 
@@ -266,6 +252,14 @@
     return true;
 }
 
+- (void)removeDotAnimators:(DotView*)view
+{
+    [self.collissionBehavior removeItem:view];
+    [self.gravityBehavior removeItem:view];
+    [self.bounceBehavior removeItem:view];
+
+}
+
 - (void)addDotAboveColumn:(NSInteger)column offset:(NSInteger)offset
 {
     DotView *dot = [[DotView alloc] initWithColor:[UIColor randomColor]];
@@ -274,12 +268,8 @@
     [dot setFrame:CGRectMake(column*50, -60*offset + (column * 10), 48, 48)];
     [dot setRow:0];
     [dot setColumn:column];
-    [self.collissionBehavior addItem:dot];
-    [self.gravityBehavior addItem:dot];
-    
+    [self configureDotViewAnimators:dot];
     [self.animator updateItemUsingCurrentState:dot];
-    
-    
 }
 
 - (void)removeDotAtRow:(NSInteger)row column:(NSInteger)column
@@ -294,9 +284,7 @@
         return;
     }
     
-    [self.collissionBehavior removeItem:view];
-    [self.gravityBehavior removeItem:view];
-
+    [self removeDotAnimators:view];
     
     [UIView animateWithDuration:0.25 animations:^{
     
@@ -321,8 +309,6 @@
             DotView *view = dotRow[column];
             [view setRow:view.row + 1];
             [self.dotRows[i+1] replaceObjectAtIndex:column withObject:view];
-     //       [self.animator removeBehavior:view.attachmentBehavior];
-      //      view.attachmentBehavior = nil;
         }
 
     }
