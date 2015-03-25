@@ -36,6 +36,9 @@
     
     self.timeLeft = 30;
     
+    [self userScoreUpdatedWithScore:0];
+    
+    
 }
 
 - (void)updateTimeWithValue:(NSInteger)aValue
@@ -52,6 +55,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self startTimer];
+    [self.gameOverLabel setHidden:YES];
+    [self.startNewGameButton setHidden:YES];
 
 }
 
