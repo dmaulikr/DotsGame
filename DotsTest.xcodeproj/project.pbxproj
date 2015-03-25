@@ -17,6 +17,7 @@
 		F1D8C3441AC28418007202DA /* DotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3431AC28418007202DA /* DotView.m */; };
 		F1D8C3471AC285B8007202DA /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3461AC285B8007202DA /* UIColor+RandomColor.m */; };
 		F1D8C34A1AC28925007202DA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3491AC28925007202DA /* MainViewController.m */; };
+		F1D8C34C1AC2C8F0007202DA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C34B1AC2C8F0007202DA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F1D8C3461AC285B8007202DA /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
 		F1D8C3481AC28925007202DA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		F1D8C3491AC28925007202DA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F1D8C34B1AC2C8F0007202DA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		F1D8C3101AC28404007202DA = {
 			isa = PBXGroup;
 			children = (
+				F1D8C34B1AC2C8F0007202DA /* README.md */,
 				F1D8C31B1AC28404007202DA /* DotsTest */,
 				F1D8C3351AC28404007202DA /* DotsTestTests */,
 				F1D8C31A1AC28404007202DA /* Products */,
@@ -239,6 +242,7 @@
 				F1D8C3281AC28404007202DA /* ViewController.m in Sources */,
 				F1D8C34A1AC28925007202DA /* MainViewController.m in Sources */,
 				F1D8C3471AC285B8007202DA /* UIColor+RandomColor.m in Sources */,
+				F1D8C34C1AC2C8F0007202DA /* README.md in Sources */,
 				F1D8C31F1AC28404007202DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
