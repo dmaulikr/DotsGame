@@ -17,6 +17,7 @@
 @property (assign) NSInteger row;
 @property (assign) NSInteger column;
 @property (assign) BOOL shouldHighlight;
+@property (strong) UIImageView *sphereImageView;
 
 @property (assign) UIAttachmentBehavior *attachmentBehavior;
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBA6D6D91AC3002F0023CF86 /* sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = BBA6D6D81AC3002F0023CF86 /* sphere.png */; };
 		F1D8C31F1AC28404007202DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C31E1AC28404007202DA /* main.m */; };
 		F1D8C3221AC28404007202DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3211AC28404007202DA /* AppDelegate.m */; };
 		F1D8C3251AC28404007202DA /* DotsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3231AC28404007202DA /* DotsTest.xcdatamodeld */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BBA6D6D81AC3002F0023CF86 /* sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sphere.png; sourceTree = "<group>"; };
 		F1D8C3191AC28404007202DA /* DotsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D8C31D1AC28404007202DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1D8C31E1AC28404007202DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		F1D8C3101AC28404007202DA = {
 			isa = PBXGroup;
 			children = (
+				BBA6D6D81AC3002F0023CF86 /* sphere.png */,
 				F1D8C34B1AC2C8F0007202DA /* README.md */,
 				F1D8C31B1AC28404007202DA /* DotsTest */,
 				F1D8C3351AC28404007202DA /* DotsTestTests */,
@@ -217,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA6D6D91AC3002F0023CF86 /* sphere.png in Resources */,
 				F1D8C32B1AC28404007202DA /* Main.storyboard in Resources */,
 				F1D8C32D1AC28404007202DA /* Images.xcassets in Resources */,
 			);

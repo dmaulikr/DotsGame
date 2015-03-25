@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5EB13AF3-0512-4834-88FE-6337D11E1F63</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DotsTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FFFF4DC667E9B72C14C0D5729F61FDEB6B055612</key>
+		<string>https://github.com/samhann/DotsGame.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DotsTest.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FFFF4DC667E9B72C14C0D5729F61FDEB6B055612</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/samhann/DotsGame.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FFFF4DC667E9B72C14C0D5729F61FDEB6B055612</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FFFF4DC667E9B72C14C0D5729F61FDEB6B055612</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DotsGame</string>
+		</dict>
+	</array>
+</dict>
+</plist>
