@@ -61,7 +61,7 @@
     self.collissionBehavior = [[UICollisionBehavior alloc] init];
     self.bounceBehavior = [[UIDynamicItemBehavior alloc] init];
     
-    self.bounceBehavior.elasticity = 0.6 ;
+    self.bounceBehavior.elasticity = 0.09 ;
     
     CGPoint currentPoint = CGPointMake(0, 0);
     
@@ -79,6 +79,8 @@
     [self.collissionBehavior setCollisionMode:UICollisionBehaviorModeEverything];
     
     self.gravityBehavior = [[UIGravityBehavior alloc] init];
+    
+     self.gravityBehavior.gravityDirection = CGVectorMake(0,4);
 }
 
 
