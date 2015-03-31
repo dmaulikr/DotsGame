@@ -32,6 +32,7 @@
         
         [self.sphereImageView setContentMode:UIViewContentModeScaleAspectFit];
         
+        self.sphereImageView.clipsToBounds = YES;
         
         [self.sphereImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight ];
         

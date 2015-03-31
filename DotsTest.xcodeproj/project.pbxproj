@@ -14,7 +14,6 @@
 		F1D8C3281AC28404007202DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3271AC28404007202DA /* ViewController.m */; };
 		F1D8C32B1AC28404007202DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D8C3291AC28404007202DA /* Main.storyboard */; };
 		F1D8C32D1AC28404007202DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D8C32C1AC28404007202DA /* Images.xcassets */; };
-		F1D8C3391AC28404007202DA /* DotsTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3381AC28404007202DA /* DotsTestTests.m */; };
 		F1D8C3441AC28418007202DA /* DotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3431AC28418007202DA /* DotView.m */; };
 		F1D8C3471AC285B8007202DA /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3461AC285B8007202DA /* UIColor+RandomColor.m */; };
 		F1D8C34A1AC28925007202DA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D8C3491AC28925007202DA /* MainViewController.m */; };
@@ -45,7 +44,6 @@
 		F1D8C32C1AC28404007202DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F1D8C3321AC28404007202DA /* DotsTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DotsTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D8C3371AC28404007202DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1D8C3381AC28404007202DA /* DotsTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotsTestTests.m; sourceTree = "<group>"; };
 		F1D8C3421AC28418007202DA /* DotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotView.h; sourceTree = "<group>"; };
 		F1D8C3431AC28418007202DA /* DotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotView.m; sourceTree = "<group>"; };
 		F1D8C3451AC285B8007202DA /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 		F1D8C3351AC28404007202DA /* DotsTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				F1D8C3381AC28404007202DA /* DotsTestTests.m */,
 				F1D8C3361AC28404007202DA /* Supporting Files */,
 			);
 			path = DotsTestTests;
@@ -255,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1D8C3391AC28404007202DA /* DotsTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

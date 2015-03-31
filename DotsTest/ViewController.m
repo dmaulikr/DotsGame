@@ -49,8 +49,8 @@
                                                toPoint:CGPointMake(aPoint.x, aPoint.y + height)];
 
     
-    [self.collissionBehavior addBoundaryWithIdentifier:NSStringFromCGPoint(aPoint) fromPoint:CGPointMake(aPoint.x + kBallDiameter - 2,aPoint.y - 600)
-                                               toPoint:CGPointMake(aPoint.x + kBallDiameter -2, aPoint.y + height)];
+    [self.collissionBehavior addBoundaryWithIdentifier:[NSString stringWithFormat:@"%@%@",NSStringFromCGPoint(aPoint),@"2"] fromPoint:CGPointMake(aPoint.x + kBallDiameter  ,aPoint.y - 600)
+                                               toPoint:CGPointMake(aPoint.x + kBallDiameter , aPoint.y + height)];
 
 
 }
@@ -61,7 +61,7 @@
     self.collissionBehavior = [[UICollisionBehavior alloc] init];
     self.bounceBehavior = [[UIDynamicItemBehavior alloc] init];
     
-    self.bounceBehavior.elasticity = 0.08 ;
+    self.bounceBehavior.elasticity = 0.6 ;
     
     CGPoint currentPoint = CGPointMake(0, 0);
     
@@ -270,7 +270,7 @@
     DotView *dot = [[DotView alloc] initWithColor:[UIColor randomColor]];
     [self.dotRows[0] replaceObjectAtIndex:column withObject:dot];
     [self.view addSubview:dot];
-    [dot setFrame:CGRectMake(column* (kBallDiameter+10), -(kBallDiameter)*offset - (column * 10), kBallDiameter - 2, kBallDiameter - 2)];
+    [dot setFrame:CGRectMake(column* (kBallDiameter+15), -(kBallDiameter)*offset - (column * 10), kBallDiameter - 2, kBallDiameter - 2)];
     [dot setRow:0];
     [dot setColumn:column];
     [self configureDotViewAnimators:dot];
